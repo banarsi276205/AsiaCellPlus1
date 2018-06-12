@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/side_menu_bg"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/invisible"
+        android:layout_width="match_parent"
+        android:layout_height="150dp" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/invisible"
+        android:alpha="0.8" >
+
+        <ImageView
+            android:id="@+id/imageViewBrown"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/ic_logo_arabic" />
+
+        <TextView
+            android:id="@+id/textViewPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageViewBrown"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="2"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@android:color/white" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewPhone"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal" >
+
+            <EditText
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@android:color/white"
+                android:editable="false"
+                android:ems="8"
+                android:text="077-"
+                android:textColor="@android:color/black" >
+                <requestFocus />
+            </EditText>
+
+            <EditText
+                android:id="@+id/editTextPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_vertical"
+                android:background="@android:color/white"
+                android:ems="8"
+               
+                android:inputType="number"
+                android:maxLength="8"
+                android:textColor="@android:color/black" >
+
+                <requestFocus />
+            </EditText>
+
+            <ImageButton
+                android:id="@+id/imageButtondone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/editTextPhone"
+                android:layout_toRightOf="@+id/editTextPhone"
+                android:background="@android:color/transparent"
+                android:scaleType="center"
+                android:src="@drawable/send" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>
